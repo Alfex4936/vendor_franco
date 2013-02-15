@@ -1,27 +1,22 @@
 #!/system/bin/sh
-# PrimeDirective, Sonicxml, DHO, Nuclearmistake
-# With inspiration from DroidTh3ory
+# Franco-c
 
 sync
 sysrw
 
-# IO Tweaks
-BLOCK_DEVS=`ls -d /sys/block/mmc*`;
-BLOCK_DEVS="$BLOCK_DEVS `ls -d /sys/block/mtd*`";
-BLOCK_DEVS="$BLOCK_DEVS `ls -d /sys/block/dm-*`";
-
-for i in $BLOCK_DEVS;
-do
-    echo "0" > $i/queue/rotational; 
-    echo "16" > $i/queue/iosched/fifo_batch;
-    echo "256" > $i/queue/max_sectors_kb;
-done;
+# etc
+echo "0" >/proc/sys/net/ipv6/conf/all/forwarding
+renice -17 `pidof com.android.systemui`
+echo "0" > /proc/sys/net/ipv4/tcp_timestamps
+echo "1" > /proc/sys/net/ipv4/tcp_no_metrics_save
 
 # Enable Sysctl Tweaks
 sysctl -p /system/etc/sysctl.conf
 
 # Set SD Card Cache
-echo "2048" > /sys/devices/virtual/bdi/179:0/read_ahead_kb;
+if [ -e /sys/devices/virtual/bdi/179:0/read_ahead_kb ]; then
+echo "2048" > /sys/devices/virtual/bdi/179:0/read_ahead_kb
+fi
 
 # Breaking the lease
 echo "15" > /proc/sys/fs/lease-break-time
