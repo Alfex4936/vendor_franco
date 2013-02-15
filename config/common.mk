@@ -15,13 +15,6 @@ include frameworks/base/data/sounds/AudioPackageNewWave.mk
 # Bring in all video files
 $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 
-# Backup Tool
-#PRODUCT_COPY_FILES += \
-#    vendor/aosp/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-#    vendor/aosp/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-#    vendor/aosp/prebuilt/common/bin/50-xy.sh:system/addon.d/50-xy.sh \
-#    vendor/aosp/prebuilt/common/bin/blacklist:system/addon.d/blacklist
-
 # Blobs necessary for drm
 PRODUCT_COPY_FILES +=  \
    vendor/aosp/prebuilt/common/lib/libfrsdk.so:system/lib/libfrsdk.so \
@@ -29,6 +22,10 @@ PRODUCT_COPY_FILES +=  \
    vendor/aosp/prebuilt/common/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
    vendor/aosp/prebuilt/common/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
    vendor/aosp/prebuilt/common/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so 
+
+# Blobs necessary for drm
+PRODUCT_COPY_FILES +=  \
+   vendor/aosp/prebuilt/common/lib/libjni_koreanime.so:system/lib/libjni_koreanime.so
 
 # Build Information Properties
 include vendor/aosp/config/version.mk
