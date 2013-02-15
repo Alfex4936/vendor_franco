@@ -57,6 +57,7 @@ PRODUCT_PACKAGES += \
 
 # Xylon Packages
 PRODUCT_PACKAGES += \
+    KoreanKeyboard \
     LatinImeDictionaryPack \
     Music \
     SnapBlack \
