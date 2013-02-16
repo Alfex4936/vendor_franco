@@ -36,7 +36,7 @@ PRODUCT_COPY_FILES +=  \
     vendor/aosp/prebuilt/common/etc/init.d/02cleaning:system/etc/init.d/02cleaning \
     vendor/aosp/prebuilt/common/etc/init.d/95zipalign:system/etc/init.d/95zipalign \
     vendor/aosp/prebuilt/common/etc/init.d/98fruit:system/etc/init.d/98fruit \
-    vendor/aosp/prebuilt/common/xbin/zipalign:system/xbin/zipalign
+    vendor/aosp/prebuilt/common/bin/zipalign:system/bin/zipalign
 
 # Google Proprietaries
 PRODUCT_COPY_FILES +=  \

@@ -15,6 +15,9 @@ include frameworks/base/data/sounds/AudioPackageNewWave.mk
 # Bring in all video files
 $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 
+# Enable ADB authentication
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+
 # Blobs necessary for drm
 PRODUCT_COPY_FILES +=  \
    vendor/aosp/prebuilt/common/lib/libfrsdk.so:system/lib/libfrsdk.so \
