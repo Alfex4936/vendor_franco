@@ -9,14 +9,13 @@ echo "0" >/proc/sys/net/ipv6/conf/all/forwarding
 renice -17 `pidof com.android.systemui`
 echo "0" > /proc/sys/net/ipv4/tcp_timestamps
 echo "1" > /proc/sys/net/ipv4/tcp_no_metrics_save
+echo "0" > /proc/sys/net/ipv4/tcp_timestamps;
+echo "1" > /proc/sys/net/ipv4/tcp_tw_reuse;
+echo "1" > /proc/sys/net/ipv4/tcp_sack;
+echo "1" > /proc/sys/net/ipv4/tcp_tw_recycle;
 
 # Enable Sysctl Tweaks
 sysctl -p /system/etc/sysctl.conf
-
-# Set SD Card Cache
-if [ -e /sys/devices/virtual/bdi/179:0/read_ahead_kb ]; then
-echo "2048" > /sys/devices/virtual/bdi/179:0/read_ahead_kb
-fi
 
 # Breaking the lease
 echo "15" > /proc/sys/fs/lease-break-time
