@@ -11,6 +11,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=gpu \
     ro.telephony.call_ring.delay=500 \
     ro.lge.proximity.delay=25 \
+    dalvik.vm.execution-mode=int:jit \
     mot.proximity.delay=25
 
 # Misc Files & init.d files
