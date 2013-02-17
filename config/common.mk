@@ -68,7 +68,8 @@ PRODUCT_PACKAGES += \
     Torch \
     XYPapers \
     XYSettings \
-    XYStats
+    XYStats \
+    PerformanceControl
 
 # SuperSU and sysrw
 PRODUCT_COPY_FILES += \
