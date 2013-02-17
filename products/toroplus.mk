@@ -7,9 +7,6 @@ $(call inherit-product, vendor/aosp/config/common.mk)
 # Inherit CDMA common stuff
 $(call inherit-product, vendor/aosp/config/cdma.mk)
 
-# Inherit Tuna common stuff
-$(call inherit-product, vendor/aosp/config/tuna.mk)
-
 # Toroplus Overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/aosp/overlay/tuna
 
