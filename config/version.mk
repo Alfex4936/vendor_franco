@@ -4,7 +4,7 @@ DATE = $(shell date -u +%Y%m%d)
 # For System Information & Build zip name
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.xylon.version=$(TARGET_PRODUCT)-official-2.1 \
-    ro.franco.version=$(TARGET_PRODUCT)-official-003 \
+    ro.franco.version=$(TARGET_PRODUCT)-mirage-reborn-001 \
     ro.modversion=$(TARGET_PRODUCT)_2.1_$(DATE)
 
 # For XYStats
