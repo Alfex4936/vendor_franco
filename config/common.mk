@@ -68,3 +68,6 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/xbin/su:system/xbin/su \
     vendor/aosp/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/aosp/prebuilt/common/xbin/sysro:system/xbin/sysro
+
+# Google Apps
+include vendor/aosp/config/gapps.mk
