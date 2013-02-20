@@ -2,12 +2,7 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
     windowsmgr.max_events_per_sec=280 \
-    ro.media.enc.jpeg.quality=100 \
     ro.HOME_APP_ADJ=1 \
-    ro.media.dec.jpeg.memcap=8000000 \
-    ro.media.enc.hprof.vid.bps=8000000 \
-    ro.media.enc.hprof.vid.fps=65 \
-    ro.media.enc.jpeg.quality=100 \
     debug.composition.type=gpu \
     ro.telephony.call_ring.delay=500 \
     ro.lge.proximity.delay=25 \

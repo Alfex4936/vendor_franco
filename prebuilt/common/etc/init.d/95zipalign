@@ -1,5 +1,4 @@
 #!/system/bin/sh
-# Brainmaster Tweaks
 # Advanced Automatic ZipAlign
 
 LOG_FILE=/data/zipalign.log
@@ -28,7 +27,7 @@ for DIR in /system/app /data/app ; do
       else
         echo "Now aligning: $DIR/$APK" | tee -a $LOG_FILE
         zipalign -f 4 $APK /cache/$APK
-        busybox mount -o rw,remount /system
+        sysrw
         cp -f -p /cache/$APK $APK
         busybox rm -f /cache/$APK
         grep "$DIR/$APK" $ZIPALIGNDB > /dev/null || echo $DIR/$APK >> $ZIPALIGNDB
@@ -37,6 +36,6 @@ for DIR in /system/app /data/app ; do
   done
 done
 
-busybox mount -o ro,remount /system
+sysro
 touch $ZIPALIGNDB
 echo "Automatic ZipAlign finished at $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a $LOG_FILE
