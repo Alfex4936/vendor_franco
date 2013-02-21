@@ -1,4 +1,4 @@
-# Gapps Apps
+# Francofy Apps
 PRODUCT_PACKAGES += \
     ChromeBookmarksSyncAdapter \
     GoogleBackupTransport \
@@ -11,9 +11,14 @@ PRODUCT_PACKAGES += \
     NetworkLocation \
     OneTimeInitializer \
     Phonesky \
-    SetupWizard
+    SetupWizard \
+    PerformanceControl \
+    KoreanKeyboard \
+    XposedDPI \
+    XposedInstaller
 
 PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/lib/libjni_koreanime.so:system/lib/libjni_koreanime.so \
     vendor/aosp/prebuilt/common/etc/permissions/com.google.android.media.effects.xml:system/etc/permissions/com.google.android.media.effects.xml \
     vendor/aosp/prebuilt/common/etc/permissions/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
     vendor/aosp/prebuilt/common/etc/permissions/features.xml:system/etc/permissions/features.xml \

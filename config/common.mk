@@ -18,10 +18,6 @@ $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 # Enable ADB authentication
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 
-# Blobs necessary for Keyboard
-PRODUCT_COPY_FILES +=  \
-   vendor/aosp/prebuilt/common/lib/libjni_koreanime.so:system/lib/libjni_koreanime.so
-
 # Build Information Properties
 include vendor/aosp/config/version.mk
 
@@ -52,7 +48,6 @@ PRODUCT_PACKAGES += \
 
 # Xylon Packages
 PRODUCT_PACKAGES += \
-    KoreanKeyboard \
     LatinImeDictionaryPack \
     Music \
     SnapBlack \
@@ -60,8 +55,7 @@ PRODUCT_PACKAGES += \
     Torch \
     XYPapers \
     XYSettings \
-    XYStats \
-    PerformanceControl
+    XYStats
 
 # SuperSU and sysrw
 PRODUCT_COPY_FILES += \
@@ -70,4 +64,4 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/xbin/sysro:system/xbin/sysro
 
 # Google Apps
-include vendor/aosp/config/gapps.mk
+include vendor/aosp/config/franco.mk
