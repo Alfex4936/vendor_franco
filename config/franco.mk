@@ -13,9 +13,7 @@ PRODUCT_PACKAGES += \
     Phonesky \
     SetupWizard \
     PerformanceControl \
-    KoreanKeyboard \
-    XposedDPI \
-    XposedInstaller
+    KoreanKeyboard
 
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/lib/libjni_koreanime.so:system/lib/libjni_koreanime.so \
