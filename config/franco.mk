@@ -13,7 +13,8 @@ PRODUCT_PACKAGES += \
     Phonesky \
     SetupWizard \
     PerformanceControl \
-    KoreanKeyboard
+    KoreanKeyboard \
+    Development
 
 PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/lib/libjni_koreanime.so:system/lib/libjni_koreanime.so \
