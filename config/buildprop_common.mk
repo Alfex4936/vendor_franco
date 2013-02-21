@@ -5,8 +5,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.HOME_APP_ADJ=1 \
     debug.composition.type=gpu \
     ro.telephony.call_ring.delay=500 \
+    wifi.supplicant_scan_interval=180 \
+    ro.ril.disable.power.collapse=0 \
     ro.lge.proximity.delay=25 \
-    dalvik.vm.execution-mode=int:jit \
+    video.accelerate.hw=1 \
     mot.proximity.delay=25
 
 # Misc Files & init.d files
