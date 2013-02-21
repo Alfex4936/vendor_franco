@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES +=  \
 # Some needed packages
 PRODUCT_PACKAGES += \
     Mms \
-    Stk
+    LegacyCamera
 
 # System dump APN config
 PRODUCT_COPY_FILES += \
