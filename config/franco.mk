@@ -15,8 +15,7 @@ PRODUCT_PACKAGES += \
     SetupWizard \
     PerformanceControl \
     KoreanKeyboard \
-    Development \
-    QuickSearchBox
+    Development
 
 # Fucking Funkies
 PRODUCT_COPY_FILES += \
@@ -39,5 +38,5 @@ PRODUCT_COPY_FILES += \
 
 # For System Information & Build zip name
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.franco.version=Mirage_maguro-002
+    ro.franco.version=Mirage_maguro-1.1
     
