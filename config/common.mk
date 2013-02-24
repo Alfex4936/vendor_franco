@@ -63,5 +63,9 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/aosp/prebuilt/common/xbin/sysro:system/xbin/sysro
 
-# Google Apps
-include vendor/aosp/config/franco.mk
+# MIRAGE
+include vendor/aosp/config/mirage.mk
+
+# Special Ringtone
+PRODUCT_COPY_FILES += \
+    vendor/aosp/prebuilt/common/media/Xylonize.mp3:system/media/audio/ringtones/Xylonize.mp3
