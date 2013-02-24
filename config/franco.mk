@@ -39,5 +39,5 @@ PRODUCT_COPY_FILES += \
 
 # For System Information & Build zip name
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.franco.version=$(TARGET_PRODUCT)-mirage-reborn-001
+    ro.franco.version=Mirage_maguro-002
     
