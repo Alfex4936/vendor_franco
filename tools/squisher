@@ -83,7 +83,7 @@ echo
 mkdir $REPACK/ota
 (
 cd $REPACK/ota
-echo $CL_CYN"Unpacking $OTAPACKAGE..."$CL_RST
+echo "Unpacking "$CL_CYN"$OTAPACKAGE..."$CL_RST
 unzip $QUIET $OTAPACKAGE
 echo
 

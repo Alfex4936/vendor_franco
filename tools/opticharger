@@ -98,7 +98,7 @@ then
         KEY=build/target/product/security/$2.pk8
         if [ ! -f "$ANDROID_BUILD_TOP/$CERT" ];
         then
-            echo $CL_RED"$CERT does not exist!";$CL_RST
+            echo $CL_RED"$CERT"$CL_RST" does not exist!";
             exit 1;
         fi
     else
@@ -106,14 +106,14 @@ then
         [ $QUIET ] || echo "APKINFO: $APKINFO";
         if [ "$APKINFO" = "" ];
         then
-            echo $CL_RED"No apk info for $NAME";$CL_RST
+            echo "No apk info for "$CL_RED"$NAME";$CL_RST
             exit 1;
         fi
         CERT=`echo $APKINFO | awk {'print $2'} | cut -f 2 -d "=" | tr -d "\""`;
         KEY=`echo $APKINFO | awk {'print $3'} | cut -f 2 -d "=" | tr -d "\""`;
         if [ "$CERT" = "" ];
         then
-            echo $CL_RED"Unable to find certificate for $NAME"$CL_RST
+            echo "Unable to find certificate for "$CL_RED"$NAME"$CL_RST
             exit 1;
         fi
         if [ "$CERT" = "PRESIGNED" ];
@@ -123,7 +123,7 @@ then
         fi
     fi
 
-    [ $QUIET ] || echo $CL_YLW"Certificate:"$CL_RST" $CERT";
+    [ $QUIET ] || echo "Certificate:"$CL_YLW""$CL_RST" $CERT";
 
     [ -d $TMPDIR/$NAME ] && rm -rf $TMPDIR/$NAME
     mkdir -p $TMPDIR/$NAME
@@ -140,7 +140,7 @@ then
     [ $QUIET ] || echo $CL_GRN"Repacking apk.."$CL_RST
     aapt p -0 .dat -0 .dict -0 .arsc -F $NAME .
 
-    [ $QUIET ] || echo $CL_YLW"Resigning with cert: `echo $CERT`"$CL_RST
+    [ $QUIET ] || echo "Resigning with cert: `echo "$CL_YLW"$CERT`"$CL_RST
 
     [ $QUIET ] || echo java -jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar $ANDROID_BUILD_TOP/$CERT $ANDROID_BUILD_TOP/$KEY $NAME signed_$NAME
     java -jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar $ANDROID_BUILD_TOP/$CERT $ANDROID_BUILD_TOP/$KEY $NAME signed_$NAME
