@@ -51,15 +51,14 @@ PRODUCT_PACKAGES += \
     LatinImeDictionaryPack \
     Music \
     SnapBlack \
-    SuperSU \
+    Superuser \
     Torch \
     XYPapers \
     XYSettings \
     XYStats
 
-# SuperSU and sysrw
+# sysrw and sysro
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/xbin/su:system/xbin/su \
     vendor/aosp/prebuilt/common/xbin/sysrw:system/xbin/sysrw \
     vendor/aosp/prebuilt/common/xbin/sysro:system/xbin/sysro
 

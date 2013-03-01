@@ -15,7 +15,10 @@ PRODUCT_PACKAGES += \
     SetupWizard \
     PerformanceControl \
     KoreanKeyboard \
-    Development
+    Development \
+    DashClock \
+    su \
+    Widgets
 
 # Fucking Funkies
 PRODUCT_COPY_FILES += \
@@ -39,4 +42,7 @@ PRODUCT_COPY_FILES += \
 # For System Information & Build zip name
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.mirage.version=Mirage_maguro-1.1
+
+# superuser embedded
+SUPERUSER_EMBEDDED := true
     
