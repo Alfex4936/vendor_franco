@@ -46,12 +46,17 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     audio_effects.conf
 
+# Superuser Packages
+SUPERUSER_PACKAGE := com.koushaosp.superuser
+
+PRODUCT_PACKAGES += \
+    Superuser
+
 # Xylon Packages
 PRODUCT_PACKAGES += \
     LatinImeDictionaryPack \
     Music \
     SnapBlack \
-    Superuser \
     Torch \
     XYPapers \
     XYSettings \

@@ -41,8 +41,5 @@ PRODUCT_COPY_FILES += \
 
 # For System Information & Build zip name
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mirage.version=Mirage_maguro-1.1
-
-# superuser embedded
-SUPERUSER_EMBEDDED := true
+    ro.mirage.version=Mirage_maguro-1.2
     
