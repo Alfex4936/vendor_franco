@@ -1,12 +1,13 @@
 # Build.Prop Tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
-    windowsmgr.max_events_per_sec=280 \
+    windowsmgr.max_events_per_sec=90 \
     ro.HOME_APP_ADJ=1 \
     ro.telephony.call_ring.delay=500 \
     wifi.supplicant_scan_interval=180 \
     ro.lge.proximity.delay=25 \
-    mot.proximity.delay=25
+    mot.proximity.delay=25 \
+    debug.composition.type=gpu
 
 # Misc Files & init.d files
 PRODUCT_COPY_FILES +=  \
