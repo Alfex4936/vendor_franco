@@ -1,13 +1,26 @@
 # Build.Prop Tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.kernel.android.checkjni=0 \
-    windowsmgr.max_events_per_sec=90 \
+    dalvik.vm.checkjni=false \
+    dalvik.vm.dexopt-flags=v=n,o=v \
+    dalvik.vm.execution-mode=int:jit \
+    dalvik.vm.stack-trace-file=/data/anr/traces.txt \
+    dalvik.vm.verify-bytecode=false \
+    pm.sleep_mode=1 \
+    ro.ext4fs=1 \
     ro.HOME_APP_ADJ=1 \
-    ro.telephony.call_ring.delay=500 \
-    wifi.supplicant_scan_interval=180 \
-    ro.lge.proximity.delay=25 \
-    mot.proximity.delay=25 \
+    ro.kernel.android.checkjni=0 \
+    ro.kernel.checkjni=0 \
+    ro.media.enc.jpeg.quality=100 \
+    ro.media.enc.hprof.vid.fps=65 \
+    windowsmgr.max_events_per_sec=280 \
+    wifi.supplicant_scan_interval=180
+
+PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=gpu
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.performance.tuning=1
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.hw=1
 
 # Misc Files & init.d files
 PRODUCT_COPY_FILES +=  \
@@ -19,15 +32,12 @@ PRODUCT_COPY_FILES +=  \
 # 01010101010101010010101010
 PRODUCT_COPY_FILES +=  \
     vendor/aosp/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
-    vendor/aosp/prebuilt/common/etc/init.d/01cherrybomb:system/etc/init.d/01cherrybomb \
+    vendor/aosp/prebuilt/common/etc/init.d/01pikachu:system/etc/init.d/01pikachu \
     vendor/aosp/prebuilt/common/etc/init.d/95zipalign:system/etc/init.d/95zipalign \
-    vendor/aosp/prebuilt/common/etc/init.d/98fruit:system/etc/init.d/98fruit \
+    vendor/aosp/prebuilt/common/etc/init.d/98heuheu:system/etc/init.d/98heuheu \
     vendor/aosp/prebuilt/common/bin/zipalign:system/bin/zipalign
 
 # Google Proprietaries
 PRODUCT_COPY_FILES +=  \
     vendor/aosp/prebuilt/common/lib/libgtalk_jni.so:system/lib/libgtalk_jni.so \
-    vendor/aosp/prebuilt/common/lib/libgtalk_stabilize.so:system/lib/libgtalk_stabilize.so \
-    vendor/aosp/prebuilt/common/lib/libjni_filtershow_filters.so:system/lib/libjni_filtershow_filters.so \
-    vendor/aosp/prebuilt/common/lib/libjni_mosaic.so:system/lib/libjni_mosaic.so \
-    vendor/aosp/prebuilt/common/lib/liblightcycle.so:system/lib/liblightcycle.so
+    vendor/aosp/prebuilt/common/lib/libgtalk_stabilize.so:system/lib/libgtalk_stabilize.so

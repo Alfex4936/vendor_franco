@@ -41,22 +41,23 @@ include vendor/aosp/config/buildprop_common.mk
 # CyanogenMod Packages
 PRODUCT_PACKAGES += \
     CMFileManager \
+    Development \
     LockClock \
     DSPManager \
     libcyanogen-dsp \
     audio_effects.conf
 
 # Superuser Packages
-SUPERUSER_PACKAGE := com.koushaosp.superuser
-
 PRODUCT_PACKAGES += \
-    Superuser
+    Superuser \
+    su
+
+SUPERUSER_PACKAGE := com.xyaosp.superuser
 
 # Xylon Packages
 PRODUCT_PACKAGES += \
     LatinImeDictionaryPack \
     Music \
-    SnapBlack \
     Torch \
     XYPapers \
     XYSettings \
