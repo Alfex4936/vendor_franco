@@ -34,8 +34,7 @@ PRODUCT_COPY_FILES += \
     vendor/aosp/prebuilt/common/lib/libfrsdk.so:system/lib/libfrsdk.so \
     vendor/aosp/prebuilt/common/lib/libgcomm_jni.so:system/lib/libgcomm_jni.so \
     vendor/aosp/prebuilt/common/lib/libgoogle_recognizer_jni.so:system/lib/libgoogle_recognizer_jni.so \
-    vendor/aosp/prebuilt/common/lib/libjni_filtershow_filters.so:system/lib/libjni_filtershow_filters.so \
-    vendor/aosp/prebuilt/common/lib/libpatts_engine_jni_api.so:system/lib/libpatts_engine_jni_api.so \
+    vendor/aosp/prebuilt/common/lib/libfilterpack_facedetect.so:system/lib/libfilterpack_facedetect.so \
     vendor/aosp/prebuilt/common/lib/libspeexwrapper.so:system/lib/libspeexwrapper.so \
     vendor/aosp/prebuilt/common/lib/libvorbisencoder.so:system/lib/libvorbisencoder.so
 
