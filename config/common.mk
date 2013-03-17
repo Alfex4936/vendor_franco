@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
-SUPERUSER_PACKAGE := com.xyaosp.superuser
+SUPERUSER_PACKAGE := com.mirage.superuser
 
 # Xylon Packages
 PRODUCT_PACKAGES += \

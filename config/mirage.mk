@@ -1,6 +1,10 @@
 # Francofy Apps
 PRODUCT_PACKAGES += \
     ChromeBookmarksSyncAdapter \
+    ConfigUpdater \
+    GenieWidget \
+    GmsCore \
+    GoogleCalendarSyncAdapter \
     GoogleBackupTransport \
     GoogleContactsSyncAdapter \
     GoogleFeedback \
